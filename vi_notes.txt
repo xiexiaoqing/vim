@@ -1,0 +1,37 @@
+:help   #see all help general guide
+:help txt <ctrl-d> #see all .txt filename for help
+###Vundle - a tool to manage vim plugin###
+https://github.com/VundleVim/Vundle.vim
+
+### vim session###
+:so[urce] <session_name>  #read command from file , e.g. vim session file
+:mks[ession] <session_name>  #create a vim session
+
+###vimium##
+vim-mode for chrome ,chrome extensions #check installed via chrome://extensions
+ref: https://github.com/philc/vimium
+shift + ?  #show vimium help page
+
+##vundle ##
+#vim plugin/pkg manager
+git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle   #install vundlegit clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle   #install vundle
+:help vundle  #Quick Start inside for steps
+
+###searching###
+/pattern  #search forward
+?pattern  #search backward
+n         #repeat/next match
+N         #repeat/previous match
+*         #search the word under cursor
+g*        #search for partial word under cursor
+[I        #show lines with matching under cursor
+:%s/old/new  #seach whole file and replace
+:%s/old/new/c #confirm for each replace
+
+###edit ###
+#delete all lines
+gg #go to first line
+dG #delete lines after below ,include current line
+d1G  #delete from current line to first line to the file , no direction limit
+dgg #delete all lines above
+
