@@ -60,7 +60,7 @@ filetype off                  " required
 " autocmd VimEnter * if argc() && !exists("s:std_in") | NERDTree | endif
 
 " " VIM-SETTING AS MS 
-execute pathogen #infect()
+" " execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
@@ -303,7 +303,7 @@ nnoremap wq :wq
 nnoremap conf :e ~/.vimrc
 
 " " select all text of file
-nnoremap <C-a> ggvGG$
+nnoremap <C-a> 1GVG
 
 " " comment out current line
 vnoremap co :s/^/#/
@@ -328,11 +328,20 @@ inoremap jjj <C-[>
 
 " "replace
 " search whole file and replace
-nnoremap % :%s/
+nnoremap %s :%s/
+
+" nnoremap %y :%y
+" " select and delete all
+" nnoremap %d :%d
 " turn on/off search config
 :noremap <F4> :set hlsearch! hlsearch?<CR>  
 :noremap <F5> :set incsearch! incsearch?<CR>
-:nnoremao <silent> <Space> :echo<CR>
+:nnoremap <silent> <Space> :echo<CR>
 
 " "command mode
 :noremap co :
+
+" " select text
+" Quickly select the text that was just pasted. This allow you to, e.g. indent  it after pasting
+nnoremap gV `[V`]
+"Make Y yank everything from the cursor to the end of the line. default Y yank the current line
