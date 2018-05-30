@@ -247,13 +247,18 @@ set pastetoggle=
 " " Do not change 'tabstop' from its default value of 8 with this setup.
 set shiftwidth=4
 set softtabstop=4
+" auto expand tab into space
 set expandtab
 "
 " " Indentation settings for using hard tabs for indent. Display tabs as
 " " four characters wide.
-set shiftwidth=4
 set tabstop=4
-"
+" " auto expand tab into space, only for python
+autocmd FileType python set expandtab
+" " indent setting
+set smartindent
+set autoindent
+set cindent  " c style indent
 "
 " "------------------------------------------------------------
 " " Mappings {{{1
@@ -306,7 +311,7 @@ nnoremap conf :e ~/.vimrc
 nnoremap <C-a> 1GVG
 
 " " comment out current line
-vnoremap co :s/^/#/
+vnoremap cm :s/^/#/
 vnoremap uc :s/^#/ /
 
 " " tab
@@ -345,3 +350,17 @@ nnoremap %s :%s/
 " Quickly select the text that was just pasted. This allow you to, e.g. indent  it after pasting
 nnoremap gV `[V`]
 "Make Y yank everything from the cursor to the end of the line. default Y yank the current line
+
+
+
+"switch between windows
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" " enable folding
+" use za to fold, or space key
+set foldmethod=indent
+set foldlevel=1
+nnoremap <space> za
