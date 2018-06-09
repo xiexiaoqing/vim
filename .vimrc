@@ -1,4 +1,4 @@
-" " XIE XIAOQING HOME PC PLUGINS
+" " PLUGINS
 " " use Vundle
 set nocompatible              " be iMproved, required
 filetype off                  " required
