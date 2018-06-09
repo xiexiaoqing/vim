@@ -36,4 +36,3 @@ d1G  #delete from current line to first line to the file , no direction limit
 dgg #delete all lines above
 
 
-
